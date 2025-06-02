@@ -12,9 +12,9 @@ interface OnboardingProps {
 
 const getBackgroundColorClass = (color: string) => {
   const colorMap: Record<string, string> = {
-    pink: 'bg-pink',
-    'blue-light': 'bg-blue-light',
-    yellow: 'bg-yellow',
+    'green-500': 'bg-green-500',
+    'blue-500': 'bg-blue-500',
+    'brown-500': 'bg-brown-500',
   };
   return colorMap[color] || 'bg-gray-200';
 };
@@ -22,9 +22,10 @@ const getBackgroundColorClass = (color: string) => {
 const getTextColorClass = (color: string) => {
   const colorMap: Record<string, string> = {
     green: 'text-green',
-    'blue-dark': 'text-blue-dark',
-    orange: 'text-orange',
+    blue: 'text-blue',
+    brown: 'text-brown',
   };
+
   return colorMap[color] || 'text-black';
 };
 
@@ -82,7 +83,7 @@ export default function Onboarding({ data, index, x }: OnboardingProps) {
         />
       </Animated.View>
       <Text
-        className={`text-[44px] font-bold text-center mb-[10px] mx-5 ${getTextColorClass(data.textColor)}`}
+        className={`text-4xl font-bold text-center mb-[10px] mx-5 ${getTextColorClass(data.textColor)}`}
       >
         {data.text}
       </Text>

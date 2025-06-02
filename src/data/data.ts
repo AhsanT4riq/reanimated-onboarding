@@ -12,23 +12,23 @@ const data: OnboardingData[] = [
   {
     id: 1,
     animation: require('../assets/animations/Lottie1.json'),
-    text: 'Lorem Ipsum dolor sit amet',
+    text: 'Order Instantly From Your Phone!',
     textColor: 'green',
-    backgroundColor: 'pink',
+    backgroundColor: 'green-500',
   },
   {
     id: 2,
     animation: require('../assets//animations/Lottie2.json'),
-    text: 'Lorem Ipsum dolor sit amet',
-    textColor: 'blue-dark',
-    backgroundColor: 'blue-light',
+    text: 'Track Your Delivery in Real Time!',
+    textColor: 'blue',
+    backgroundColor: 'blue-500',
   },
   {
     id: 3,
     animation: require('../assets//animations/Lottie3.json'),
-    text: 'Lorem Ipsum dolor sit amet',
-    textColor: 'orange',
-    backgroundColor: 'yellow',
+    text: 'Enjoy Fast, Reliable Delivery!',
+    textColor: 'brown',
+    backgroundColor: 'brown-500',
   },
 ];
 

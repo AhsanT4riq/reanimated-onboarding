@@ -1,3 +1,4 @@
+import { useRouter } from 'expo-router';
 import { FlatList, Pressable, useWindowDimensions } from 'react-native';
 import Animated, {
   AnimatedRef,
@@ -23,6 +24,7 @@ export default function CustomButton({
   dataLength,
   x,
 }: CustomButtonProps) {
+  const router = useRouter();
   const { width: SCREEN_WIDTH } = useWindowDimensions();
 
   const animateWidth = useAnimatedStyle(() => {
@@ -35,7 +37,7 @@ export default function CustomButton({
     const backgroundColor = interpolateColor(
       x.value,
       [0, SCREEN_WIDTH, SCREEN_WIDTH * 2],
-      [colors.green, colors.blue[600] as any, colors.orange], // Using your actual color values
+      [colors.green[0], colors.blue[0], colors.brown[0]], // Using your actual color values
     );
     return {
       backgroundColor,
@@ -67,7 +69,7 @@ export default function CustomButton({
         animated: true,
       });
     } else {
-      console.log('Last slide');
+      router.replace('/');
     }
   };
 

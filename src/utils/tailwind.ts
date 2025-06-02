@@ -5,8 +5,9 @@ import { DefaultColors } from 'tailwindcss/types/generated/colors';
 import tailwindConfig from '@/tailwind.config';
 
 type Colors = DefaultColors & {
-  dark: string;
-  primary: string;
+  green: string;
+  blue: string;
+  brown: string;
 };
 
 export const twFullConfig = resolveConfig(tailwindConfig as Config);

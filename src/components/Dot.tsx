@@ -40,7 +40,7 @@ export default function Dot({ index, x }: DotProps) {
     const backgroundColor = interpolateColor(
       x.value,
       [0, SCREEN_WIDTH, SCREEN_WIDTH * 2],
-      [colors.green, colors.blue[600] as any, colors.orange], // Using your actual color values
+      [colors.green[0], colors.blue[0], colors.brown[0]], // Using your actual color values
     );
     return {
       backgroundColor,

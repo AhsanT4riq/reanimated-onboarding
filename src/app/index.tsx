@@ -1,60 +1,46 @@
+import { Link } from 'expo-router';
 import React from 'react';
-import { FlatList, View, ViewToken } from 'react-native';
-import Animated, {
-  useAnimatedRef,
-  useAnimatedScrollHandler,
-  useSharedValue,
-} from 'react-native-reanimated';
+import { FlatList, Text, TouchableOpacity, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-import CustomButton from '@/src/components/CustomButton';
-import Onboarding from '@/src/components/Onboarding';
-import Pagination from '@/src/components/Pagination';
-import data, { OnboardingData } from '@/src/data/data';
+const ONBOARDING_ITEMS = [
+  {
+    id: '1',
+    title: 'Step Animation',
+    route: 'ladder-animation',
+  },
+  {
+    id: '2',
+    title: 'Masking Animation',
+    route: 'masking-animation',
+  },
+] as const;
 
 export default function Index() {
-  const flatListRef = useAnimatedRef<FlatList<OnboardingData>>();
-  const flatListIndex = useSharedValue(0);
-  const x = useSharedValue(0);
-  const onScroll = useAnimatedScrollHandler({
-    onScroll: (event) => {
-      x.value = event.contentOffset.x;
-    },
-  });
-
-  const onViewableItemsChanged = ({ viewableItems }: { viewableItems: ViewToken[] }) => {
-    if (viewableItems[0].index !== null) {
-      flatListIndex.value = viewableItems[0].index;
-    }
-  };
-
   return (
-    <View className="flex-1">
-      <Animated.FlatList
-        onScroll={onScroll}
-        data={data}
-        renderItem={({ item, index }) => <Onboarding data={item} index={index} x={x} />}
-        keyExtractor={(item) => item.id.toString()}
-        scrollEventThrottle={16}
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        bounces={false}
-        pagingEnabled
-        ref={flatListRef}
-        viewabilityConfig={{
-          minimumViewTime: 100,
-          viewAreaCoveragePercentThreshold: 10,
-        }}
-        onViewableItemsChanged={onViewableItemsChanged}
-      />
-      <View className="absolute bottom-20 left-0 right-0 mx-[30px] py-[30px] flex-row items-center justify-between">
-        <Pagination data={data} x={x} />
-        <CustomButton
-          flatListIndex={flatListIndex}
-          flatListRef={flatListRef}
-          dataLength={data.length}
-          x={x}
+    <SafeAreaView className="flex-1 bg-white">
+      <View className="flex-1 px-4 py-8">
+        <Text className="text-2xl font-bold mb-8 text-gray-800">Onboarding Animations</Text>
+        <FlatList
+          data={ONBOARDING_ITEMS}
+          keyExtractor={(item) => item.id}
+          renderItem={({ item }) => (
+            <View className="mb-4">
+              <Link href={`/${item.route}`} asChild>
+                <TouchableOpacity className="p-4 bg-blue-50 rounded-lg border border-blue-100">
+                  <Text className="text-blue-700 font-medium">{item.title}</Text>
+                  <Text className="text-blue-400 text-sm mt-1">Tap to view</Text>
+                </TouchableOpacity>
+              </Link>
+            </View>
+          )}
+          contentContainerStyle={{ paddingBottom: 20 }}
+          showsVerticalScrollIndicator={false}
+          ListFooterComponent={
+            <Text className="mt-4 text-gray-500 text-center">Select an animation to view</Text>
+          }
         />
       </View>
-    </View>
+    </SafeAreaView>
   );
 }

@@ -9,14 +9,18 @@ module.exports = {
         screen: '100vw',
       },
       colors: {
-        green: '#005b4f',
-        pink: '#ffa3ce',
-        blue: {
-          100: '#bae4fd',
-          600: '#1e2169',
+        green: {
+          500: '#B8E0D2',
+          0: '#174C3C',
         },
-        orange: '#F15937',
-        yellow: '#faeb8a',
+        blue: {
+          500: '#bae4fd',
+          0: '#1e2169',
+        },
+        brown: {
+          500: '#E7C8A1',
+          0: '#321808',
+        },
       },
     },
   },
