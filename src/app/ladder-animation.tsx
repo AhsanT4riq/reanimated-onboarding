@@ -5,9 +5,9 @@ import Animated, {
   useSharedValue,
 } from 'react-native-reanimated';
 
-import CustomButton from '@/src/components/CustomButton';
-import Onboarding from '@/src/components/Onboarding';
-import Pagination from '@/src/components/Pagination';
+import CustomButton from '@/src/components/ladder/CustomButton';
+import Onboarding from '@/src/components/ladder/Onboarding';
+import Pagination from '@/src/components/ladder/Pagination';
 import data, { OnboardingData } from '@/src/data/data';
 
 export default function LadderAnimation() {

@@ -12,6 +12,10 @@ A beautiful, interactive onboarding experience built with React Native Reanimate
 - 🚀 Optimized performance with React Native Gesture Handler
 - 🎭 Beautiful Lottie animations integration
 
+## Demo
+
+https://github.com/AhsanT4riq/reanimated-onboarding/raw/main/demo/demo.mov
+
 ## Tech Stack
 
 - [Expo](https://expo.dev/) - Development platform
