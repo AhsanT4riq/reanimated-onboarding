@@ -16,7 +16,7 @@ A beautiful, interactive onboarding experience built with React Native Reanimate
 
 [![App Demo GIF](demo/demo.gif)](https://github.com/AhsanT4riq/reanimated-onboarding/raw/main/demo/demo.mov)
 
-*The GIF above shows a preview of the app. Click on it to view the full demo video (`demo.mov`).*
+_The GIF above shows a preview of the app. Click on it to view the full demo video (`demo.mov`)._
 
 ## Tech Stack
 
@@ -30,28 +30,29 @@ A beautiful, interactive onboarding experience built with React Native Reanimate
 ## Prerequisites
 
 - Node.js (v16 or later)
-- npm or yarn
-- Expo CLI (`npm install -g expo-cli`)
+- Bun (https://bun.sh/)
+- Expo CLI (`bun install -g expo-cli` or `npm install -g expo-cli`)
 - iOS Simulator (for iOS development) or Android Studio (for Android development)
 
 ## Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/yourusername/reanimated-onboarding.git
    cd reanimated-onboarding
    ```
 
 2. Install dependencies:
+
    ```bash
-   npm install
-   # or
-   yarn
+   bun install
    ```
 
 3. Start the development server:
+
    ```bash
-   npx expo start
+   bun expo start
    ```
 
 4. Run on your device/emulator:
@@ -62,25 +63,20 @@ A beautiful, interactive onboarding experience built with React Native Reanimate
 ## Project Structure
 
 ```
-src/
-├── app/                 # App entry point and routes
-├── components/          # Reusable components
-│   ├── Onboarding.tsx   # Main onboarding component
-│   ├── Pagination.tsx   # Custom pagination dots
-│   ├── Dot.tsx          # Individual dot component
-│   └── CustomButton.tsx # Custom button component
-├── data/                # Data for onboarding slides
-└── types/               # TypeScript type definitions
+.
+├── src/                  # Source code
+│   ├── app/              # Main application screens and navigation (Expo Router)
+│   ├── assets/           # Static assets (images, fonts, etc.)
+│   ├── components/       # Reusable UI components
+│   ├── data/             # Static data, mock data, or slide configurations
+│   └── utils/            # Utility functions and helpers
 ```
 
 ## Available Scripts
 
-- `npm start` - Start the development server
-- `npm run android` - Run on Android device/emulator
-- `npm run ios` - Run on iOS simulator
-- `npm run web` - Run in web browser
-- `npm run lint` - Run ESLint
-- `npm run format` - Format code with Prettier
+- `bun start` - Start the Expo development server.
+- `bun run android` - Build and run the app on a connected Android device or emulator.
+- `bun run ios` - Build and run the app on an iOS simulator (add `-d` to choose a specific device).
 
 ## Contributing
 
@@ -91,31 +87,6 @@ Contributions are welcome! Please follow these steps:
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/) for the amazing animation library
-- [Expo](https://expo.dev/) for the wonderful development experience
-- [Lottie](https://airbnb.design/lottie/) for the beautiful animations
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
 ## Learn more
 
@@ -130,3 +101,7 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
