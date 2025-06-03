@@ -14,7 +14,9 @@ A beautiful, interactive onboarding experience built with React Native Reanimate
 
 ## Demo
 
-https://github.com/AhsanT4riq/reanimated-onboarding/raw/main/demo/demo.mov
+[![App Demo GIF](demo/demo.gif)](https://github.com/AhsanT4riq/reanimated-onboarding/raw/main/demo/demo.mov)
+
+*The GIF above shows a preview of the app. Click on it to view the full demo video (`demo.mov`).*
 
 ## Tech Stack
 
