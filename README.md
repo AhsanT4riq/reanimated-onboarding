@@ -39,7 +39,7 @@ _The GIF above shows a preview of the app. Click on it to view the full demo vid
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/reanimated-onboarding.git
+   git clone https://github.com/AhsanT4riq/reanimated-onboarding.git
    cd reanimated-onboarding
    ```
 
